@@ -1,0 +1,57 @@
+<!DOCTYPE html>                             <!--doctype declaration-->
+<html>                                       <!--html start tag-->
+<head>
+<title>
+Assignment 6.1
+</title>
+</head>
+
+
+<body>                                         <!--body start tag-->
+
+<p style="font-size:20px">                            <!--salary textbox-->
+Input the salary:
+<input type="text" name="sal" id="salary"><br>
+</p>
+
+<p   style="font-size:20px">                            <!--working hour text box-->
+Input the working hours:
+<input type="text" name="work" id="work_hours">
+</p>
+
+<button onclick="display()">Click me!</button>
+
+
+<script>                                                        <!--script start tag-->
+function display()                                                 <!--function for validating given condition and displaying output-->
+{
+var salary=document.getElementById("salary").value;
+var work_hours=document.getElementById("work_hours").value;
+var bonus;
+
+if(salary<15000)
+{
+    alert("Atleast 15000 salary required");
+
+}
+
+else
+{
+   if(work_hours>10)
+   {
+  bonus=salary*0.10;
+  document.write("The basic salary of employee : " + salary +"<br>");
+   document.write("The bonus on salary is  : " + bonus);
+  }
+
+  else
+{
+document.write("The basic salary of employee : " + salary  + "<br>");
+   document.write("The bonus on salary is  : " + salary*0.05);
+}
+
+}
+}
+</script>                                                                                <!--script end tag-->
+</body>                                                                                   <!--body end tag-->          
+</html>                                                                                     <!--html end tag-->
